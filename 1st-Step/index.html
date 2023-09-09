@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- why css import here -->
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- how can we are it in react  -->
+
+    <!-- <div id="container">
+        <h1 id="headding1"> headding1 </h1>
+        <h1 id="headding2"> headding2 </h1>
+        
+    </div> -->
+
+
+     
+
+    <!-- what is crossorigin  -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <script>
+
+        const headding1 = React.createElement("h1", {
+            id : "title",
+        }, "Headding 1 From React"
+        );
+        const headding2 = React.createElement("h1", {
+            id : "title",
+        }, "Headding 2 From React"
+        );
+
+        const container = React.createElement("div", {
+            id : "container",
+        },
+        // childerns 
+         [headding1, headding2]
+        );
+
+
+        
+
+      // using react creating element
+
+      const heading = React.createElement("h1", {}, "Hello Vijay From React");
+
+      // this tails react inside the root id element create root
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      // inside root i want to render headding
+        // passing a react element inside root element
+      root.render(container);
+      
+
+      // js create elements
+      // const heading = document.createElement("h1");
+
+      // heading.innerHTML = "Hello vijay";
+
+      // root.appendChild(heading);
+    </script>
+  </body>
+</html>
